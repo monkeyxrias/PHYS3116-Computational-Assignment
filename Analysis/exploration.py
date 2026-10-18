@@ -19,3 +19,14 @@ print(harris_p2['[Fe/H]'].isna().sum()) #this returns number of missing/non conv
 print(harris_p2['[Fe/H]'].min())
 print(harris_p2['[Fe/H]'].max())
 print(harris_p2['[Fe/H]'].mean())
+
+plt.hist(harris_p2['[Fe/H]'], rwidth=0.9, bins=15)
+plt.xlabel('[Fe/H]')
+plt.ylabel('Number of globular clusters')
+plt.title('Metallicity Distribution of Milky Way Globular Clusters')
+print((harris_p2['[Fe/H]'] <-1.0).sum())
+print((harris_p2['[Fe/H]'] >=-1.0).sum())
+
+
+plt.show()
+
