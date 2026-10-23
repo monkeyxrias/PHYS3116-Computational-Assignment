@@ -20,7 +20,7 @@ vandenberg['FeH'] = pd.to_numeric(vandenberg['FeH'])
 Harris2['[Fe/H]'] = pd.to_numeric(Harris2['[Fe/H]'], errors='coerce') # Was having troubles plotting, had to add errors='coerce' due to string with parseability error
 
 plt.scatter(vandenberg['R_G'], vandenberg['FeH'], label='Van den Berg') # Plots the dataset
-print(vandenberg['R_G'].corr(vandenberg['FeH']))
+
 
 plt.xlabel('Galactocentric Distance (kpc)')
 plt.ylabel('Cluster Metallicity [Fe/H]')
@@ -29,8 +29,10 @@ plt.show()
 
 plt.figure()
 plt.scatter(Harris1['R_gc'], Harris2['[Fe/H]'], label='Harris 1996') # Since the clusters are in the same rows in each dataset, we can pair them by row.
-print(Harris1['R_gc'].corr(Harris2['[Fe/H]']))
 plt.xlabel('Galactocentric Distance (kpc)')
 plt.ylabel('Cluster Metallicity [Fe/H]')
 plt.title("Galactocentric Distance-Metallicity Relation of Milky Way Globular Clusters Harris Dataset")
 plt.show()
+
+print(vandenberg['R_G'].corr(vandenberg['FeH']))
+print(Harris1['R_gc'].corr(Harris2['[Fe/H]']))

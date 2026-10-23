@@ -28,3 +28,5 @@ plt.ylabel('Cluster Metallicity [Fe/H]')
 plt.title("Age-Metallicity Relation of Milky Way Globular Clusters")
 plt.show()
 
+print(vandenberg['Age'].corr(vandenberg['FeH'])) # Correlation Coefficient for vandenberg
+print(krause21['Age'].corr(krause21['FeH'])) # Correlation Coefficient for krause21
