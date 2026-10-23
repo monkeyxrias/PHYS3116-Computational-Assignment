@@ -18,7 +18,6 @@ Maximum [Fe/H] -> 0.00
 Mean [Fe/H] -> -1.265
 The metallicity histogram shows that clusters have a range of metallicities with the highest frequency occurring at around [Fe/H]=-1.4 where approximately 21 clusters are found. 
 68.4% of Clusters have a metallicity less than -1.0  and 31.6% of clusters have a metallicity greater than or equal to -1.0
-
 ### Age-Metallicity plot
 both datasets aren't identical, for example. 47 Tuc's reported age differs by a factor of 1.05 GYr, but this is kind of expected as measurements may come from different methods or analyses.
 
