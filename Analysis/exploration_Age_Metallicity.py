@@ -30,3 +30,6 @@ plt.show()
 
 print(vandenberg['Age'].corr(vandenberg['FeH'])) # Correlation Coefficient for vandenberg
 print(krause21['Age'].corr(krause21['FeH'])) # Correlation Coefficient for krause21
+
+print(vandenberg[vandenberg['Name'] == 'Pal12'])
+print(krause21[krause21['Object'] == 'Terzan7'])
