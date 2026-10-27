@@ -70,5 +70,19 @@ From the Van Den Berg dataset:
 The 55 clusters extend from approximately 1.2 to 21.4 kpc from the galactic centre. Clusters with higher metallicities have a general tendency  to be closer to the galactic centre while less metallic clusters spread across a wider range of distances. There is a moderate negative correlation of approximately -0.413.
 
 ## Potential Accretion Candidates 
+
+An accreted Milky Way globular cluster is one that originally formed in another galaxy usually a smaller dwarf galaxy before being brougt into the Milky Way through a merger or gravitational interaction.
+
+Palomar 12 is a gravitationally bound collection of stars in the Milky Way's halo. This cluster was a conspicuous outlier when looking at the Age-Metallicity relation of Milky Way globular clusters for the vandenBerg dataset since most clusters are anywhere from 10.5-13 
+Gyr old and Palomar 12 is around 9 Gyr old. It is also relevant to note that this cluster has a reported metallicity of [Fe/H]=-0.81 which also a relatively high metallicity where most clusters have a metallicity less than -1. It is evident these unusual properties flagged Palomar 12 as a potential candidate as there is other research investigating this cluster. Dinescu et al. (2000) investigated the proper motion and also orbital trajectories which aligns with a potential link that Palomar 12 originated from the Sagittarius Dwarf Spheroidal Galaxy (sgr). It is important to note that the computational analysis identifies unusual age-metallicity properties but it does not independently establish an accreted origin.
+
+Terzan 7 similar to Palomar 12 is also a gravitationally bound collection of stars in the Milky Way's halo at about 22.8 kpc from the Sun and 15.6 kpc from the galactic centre. Terzan 7 is an extreme outlier in the Krause21 dataset in terms of its metallicity and its age. It is the youngest cluster in the dataset at 7.4 Gyr old, where most clusters lie at around 11-14 Gyr and it also has by far the highest metallicity at [Fe/H]=-0.12 where most clusters lie around -0.5 to -2.5. Sbordone et al. (2005) investigated the chemical composition of five giant stars in Terzan 7 and found abundance patterns similar to those of stars in the Sagittarius dwarf spheroidal galaxy. The study specifically identified low alpha-element-to-iron and nickel-to-iron abundance ratios as supporting evidence. It is also important to note that the Age-Metallicity analysis identifies Terzan 7 as unusual but the independent chemical-abundance reserach provides stronger evidence linking it to Sagittarius.
 ## Limitations
+There is many limitations of this computational analysis with the most prominent one being that accreted clusters can not be definitively identified. This analysis investigated relevant properties like age, metallicity and galactocentric distance which can provide relevant clues regarding a cluster's formation history however this alone is not enough to define a cluster as accreted. The datasets also have incomplete measurements
 ## Conclusion
+## References
+
+Dinescu, D. I., et al. (2000). The Absolute Proper Motion of Palomar 12: A Case for Tidal Capture from the Sagittarius Dwarf Spheroidal Galaxy. The Astronomical Journal. https://arxiv.org/abs/astro-ph/0006314
+
+Sbordone, L., Bonifacio, P., Marconi, G., Buonanno, R., & Zaggia, S. (2005). Family ties: Abundances in Terzan 7, a Sgr dSph globular cluster. Astronomy & Astrophysics, 437(3), 905–910. https://doi.org/10.1051/0004-6361:20042315
+
