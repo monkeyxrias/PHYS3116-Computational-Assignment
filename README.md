@@ -55,21 +55,25 @@ The metallicity histogram shows that clusters have a range of metallicities with
 Both datasets aren't identical, for example. 47 Tuc's reported age differs by 1.05Gyr, but this is kind of expected as measurements may come from different methods or analyses.
 
 From the Van Den Berg dataset:
+
 ![alt text](image-2.png)
 Most clusters appear from 11-13.5 Gyr old.
 There appears to be a generalised tendency for older clusters to have a lower metallicity which aligns with the correlation coefficient of -0.718 however, the relationship is not so clean or uniform. There is notably one outlier, Pal12 that has the same metallicity of globular clusters ~2.5Gyrs older.
 Clusters such as M12 have a high metallicity for its age, showing that age alone is not a sole indicator of metallicity. 
 
 From the Krause21 dataset:
+
 ![alt text](image-1.png)
 Most clusters range from about 7.4 to 14.5 Gyr old with the most clusters concentrated around 11-14 Gyr. Similar to the Van Den Berg dataset there is also a general tendency for older clusters to have lower metallicity however the relation is not as strong with a correlation coefficient equal to -0.398. It is also evident that there is quite a large scatter for example at 13 Gyr clusters have metallicities ranging anywhere from -0.7 to -2.1. This tells us age alone can't explain metallicity for globular clusters and different clusters may have formed in environments with different chemical histories. It is also important to note there is an outlier Terzan 7 at 7.4 Gyr with a metallicity of -0.12.
 
 ## Galactocentric Distance-Metallicity Plots
 From the Harris dataset:
+
 ![alt text](image-3.png)
 The data shows most clusters are concentrated within approximately 20 kpc of the galactic centre. These clusters have a wide range of metallicities varying from approximately -2.4 to 0.0. The most distant clusters at over 60 kpc are all relatively metal poor. The overall plot shows considerable scatter with a weak negative correlation of approximately -0.271.
 
 From the Van Den Berg dataset:
+
 ![alt text](image-4.png)
 The 55 clusters extend from approximately 1.2 to 21.4 kpc from the galactic centre. Clusters with higher metallicities have a general tendency  to be closer to the galactic centre while less metallic clusters spread across a wider range of distances. There is a moderate negative correlation of approximately -0.413.
 
