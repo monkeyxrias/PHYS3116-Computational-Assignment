@@ -1,7 +1,7 @@
 # PHYS3116-Accreted Milky Way Globular Clusters
 
 ## Project Overview
-This project investigates Accreted Milky Way Globular Clusters by analysing astronomical datasets stored in csv files which contain data about cluster positions and distances, metallicity, brightness and colours, velocities and structural properties, ages and stellar masses. Through analysing and comparing data accreted clusters can be identifed as potential accretion candidates and estimates of the accreted population can be made which helps understand the formation of the Milky Way and whether it is primarily composed of in-situ clusters or accreted clusters.
+This project investigates Accreted Milky Way Globular Clusters by analysing astronomical datasets stored in csv files which contain data about cluster positions and distances, metallicity, brightness and colours, velocities and structural properties, ages and stellar masses. Through analysing and comparing data accreted clusters can be identified as potential accretion candidates and estimates of the accreted population can be made which helps understand the formation of the Milky Way and whether it is primarily composed of in-situ clusters or accreted clusters.
 
 ## Datasets
 HarrisPartI:
@@ -29,16 +29,15 @@ Finally the histogram was created using plt.hist() to create a histogram of meta
 For exploration_Age_Metallicity.py:
 Pandas was used to read the CSV files and analyse their data using pd.read_csv().
 print(vandenberg.columns.tolist()) and print(krause21.columns.tolist()) were used to display the column names for each dataset.
-print(vandenberg.head()) and vandenberg['Age'] = pd.to_numeric(vandenberg['Age']) were also used in the same was they were used in exploration.py in order to display the first five rows of each dataset and to also convert the age and metallicity columns into numerical values so that they can be used to plot the data.
+print(vandenberg.head()) and vandenberg['Age'] = pd.to_numeric(vandenberg['Age']) were also used in the same way they were used in exploration.py in order to display the first five rows of each dataset and to also convert the age and metallicity columns into numerical values so that they can be used to plot the data.
 plt.scatter(vandenberg['Age'], vandenberg['FeH'], label='Van den Berg')was used to plot the dataset and plt.show was used to show the actual scatter plot for the age-metallicity scatter plot.This was done for both the Krause and vandenBerg dataset.
 print(vandenberg['Age'].corr(vandenberg['FeH']))was used to calculate the pearson correlation coefficient and was also done for both datasets.
-Pandas filtering was also used to identify Palomar 12 and Terzan7 in their respecitve datasets using print(vandenberg[vandenberg['Name'] == 'Pal12']) and print(krause21[krause21['Object'] == 'Terzan7']).
+Pandas filtering was also used to identify Palomar 12 and Terzan7 in their respective datasets using print(vandenberg[vandenberg['Name'] == 'Pal12']) and print(krause21[krause21['Object'] == 'Terzan7']).
 
 For Galactic Distance to Metallicity.py:
 This script used essentially the same methods that are used in the previous 2 scripts such as pd.read_csv, print(vandenberg.columns.tolist()), print(vandenberg.head()), vandenberg['R_G'] = pd.to_numeric(vandenberg['R_G']).
-plt.scatter(vandenberg['R_G'], vandenberg['FeH'], label='Van den Berg') and plt.scatter(Harris1['R_gc'], Harris2['[Fe/H]'], label='Harris 1996') as used to build the scatter plot for Galactocentric distacnes vs Metallicity for both the vandenBerg and Harris datasets.
-print(vandenberg['R_G'].corr(vandenberg['FeH'])) and print(Harris1['R_gc'].corr(Harris2['[Fe/H]'])) was used to compute the correlation coefficients for the vandenBerg and Harris1 datatsets.
-
+plt.scatter(vandenberg['R_G'], vandenberg['FeH'], label='Van den Berg') and plt.scatter(Harris1['R_gc'], Harris2['[Fe/H]'], label='Harris 1996') as used to build the scatter plot for Galactocentric distances vs Metallicity for both the vandenBerg and Harris datasets.
+print(vandenberg['R_G'].corr(vandenberg['FeH'])) and print(Harris1['R_gc'].corr(Harris2['[Fe/H]'])) was used to compute the correlation coefficients for the vandenBerg and Harris catalogue.
 
 ## Preliminary Results
 Total globular cluster records -> 157
@@ -49,37 +48,44 @@ Minimum [Fe/H] -> -2.37
 Maximum [Fe/H] -> 0.00
 Mean [Fe/H] -> -1.265
 The metallicity histogram shows that clusters have a range of metallicities with the highest frequency occurring at around [Fe/H]=-1.4 where approximately 21 clusters are found. 
+![alt text](image.png)
 68.4% of Clusters have a metallicity less than -1.0  and 31.6% of clusters have a metallicity greater than or equal to -1.0
+
 ### Age-Metallicity Plots
 Both datasets aren't identical, for example. 47 Tuc's reported age differs by 1.05Gyr, but this is kind of expected as measurements may come from different methods or analyses.
 
 From the Van Den Berg dataset:
+![alt text](image-2.png)
 Most clusters appear from 11-13.5 Gyr old.
 There appears to be a generalised tendency for older clusters to have a lower metallicity which aligns with the correlation coefficient of -0.718 however, the relationship is not so clean or uniform. There is notably one outlier, Pal12 that has the same metallicity of globular clusters ~2.5Gyrs older.
 Clusters such as M12 have a high metallicity for its age, showing that age alone is not a sole indicator of metallicity. 
 
 From the Krause21 dataset:
+![alt text](image-1.png)
 Most clusters range from about 7.4 to 14.5 Gyr old with the most clusters concentrated around 11-14 Gyr. Similar to the Van Den Berg dataset there is also a general tendency for older clusters to have lower metallicity however the relation is not as strong with a correlation coefficient equal to -0.398. It is also evident that there is quite a large scatter for example at 13 Gyr clusters have metallicities ranging anywhere from -0.7 to -2.1. This tells us age alone can't explain metallicity for globular clusters and different clusters may have formed in environments with different chemical histories. It is also important to note there is an outlier Terzan 7 at 7.4 Gyr with a metallicity of -0.12.
 
 ## Galactocentric Distance-Metallicity Plots
-
 From the Harris dataset:
+![alt text](image-3.png)
 The data shows most clusters are concentrated within approximately 20 kpc of the galactic centre. These clusters have a wide range of metallicities varying from approximately -2.4 to 0.0. The most distant clusters at over 60 kpc are all relatively metal poor. The overall plot shows considerable scatter with a weak negative correlation of approximately -0.271.
 
 From the Van Den Berg dataset:
+![alt text](image-4.png)
 The 55 clusters extend from approximately 1.2 to 21.4 kpc from the galactic centre. Clusters with higher metallicities have a general tendency  to be closer to the galactic centre while less metallic clusters spread across a wider range of distances. There is a moderate negative correlation of approximately -0.413.
 
 ## Potential Accretion Candidates 
-
-An accreted Milky Way globular cluster is one that originally formed in another galaxy usually a smaller dwarf galaxy before being brougt into the Milky Way through a merger or gravitational interaction.
+An accreted Milky Way globular cluster is one that originally formed in another galaxy usually a smaller dwarf galaxy before being brought into the Milky Way through a merger or gravitational interaction.
 
 Palomar 12 is a gravitationally bound collection of stars in the Milky Way's halo. This cluster was a conspicuous outlier when looking at the Age-Metallicity relation of Milky Way globular clusters for the vandenBerg dataset since most clusters are anywhere from 10.5-13 
 Gyr old and Palomar 12 is around 9 Gyr old. It is also relevant to note that this cluster has a reported metallicity of [Fe/H]=-0.81 which also a relatively high metallicity where most clusters have a metallicity less than -1. It is evident these unusual properties flagged Palomar 12 as a potential candidate as there is other research investigating this cluster. Dinescu et al. (2000) investigated the proper motion and also orbital trajectories which aligns with a potential link that Palomar 12 originated from the Sagittarius Dwarf Spheroidal Galaxy (sgr). It is important to note that the computational analysis identifies unusual age-metallicity properties but it does not independently establish an accreted origin.
 
-Terzan 7 similar to Palomar 12 is also a gravitationally bound collection of stars in the Milky Way's halo at about 22.8 kpc from the Sun and 15.6 kpc from the galactic centre. Terzan 7 is an extreme outlier in the Krause21 dataset in terms of its metallicity and its age. It is the youngest cluster in the dataset at 7.4 Gyr old, where most clusters lie at around 11-14 Gyr and it also has by far the highest metallicity at [Fe/H]=-0.12 where most clusters lie around -0.5 to -2.5. Sbordone et al. (2005) investigated the chemical composition of five giant stars in Terzan 7 and found abundance patterns similar to those of stars in the Sagittarius dwarf spheroidal galaxy. The study specifically identified low alpha-element-to-iron and nickel-to-iron abundance ratios as supporting evidence. It is also important to note that the Age-Metallicity analysis identifies Terzan 7 as unusual but the independent chemical-abundance reserach provides stronger evidence linking it to Sagittarius.
+Terzan 7 similar to Palomar 12 is also a gravitationally bound collection of stars in the Milky Way's halo at about 22.8 kpc from the Sun and 15.6 kpc from the galactic centre. Terzan 7 is an extreme outlier in the Krause21 dataset in terms of its metallicity and its age. It is the youngest cluster in the dataset at 7.4 Gyr old, where most clusters lie at around 11-14 Gyr and it also has by far the highest metallicity at [Fe/H]=-0.12 where most clusters lie around -0.5 to -2.5. Sbordone et al. (2005) investigated the chemical composition of five giant stars in Terzan 7 and found abundance patterns similar to those of stars in the Sagittarius dwarf spheroidal galaxy. The study specifically identified low alpha-element-to-iron and nickel-to-iron abundance ratios as supporting evidence. It is also important to note that the Age-Metallicity analysis identifies Terzan 7 as unusual but the independent chemical-abundance researach provides stronger evidence linking it to Sagittarius.
+
 ## Limitations
-There is many limitations of this computational analysis with the most prominent one being that accreted clusters can not be definitively identified. This analysis investigated relevant properties like age, metallicity and galactocentric distance which can provide relevant clues regarding a cluster's formation history however this alone is not enough to define a cluster as accreted. The datasets also have incomplete measurements
+There are many limitations of this computational analysis with the most prominent one being that accreted clusters cannot be definitively identified. This analysis investigated relevant properties like age, metallicity and galactocentric distance which can provide relevant clues regarding a cluster's formation history however this alone is not enough to define a cluster as accreted. The datasets also have incomplete measurements for example in HarrisPartII there are 157 globular cluster records with 152 usable metallicity measurements where the remaining 5 were non-numerical measurements. Another key limitation is the difference between datasets where each data set has varying numbers of clusters, for example HarrisII has 157 clusters, vandenBerg has 55 and Krause21 has 61. It is also relevant to note that these datasets gave different measurements for the same cluster, for example 47 Tuc has an estimated age of 11.75 Gyr in vandenBerg and 12.8 Gyr in Krause21. An additional critical limitation is the lack of orbital and chemical-abundance analysis which can provide extra evidence for determining a cluster's origin. Differences in sample sizes, missing measurements and different measurement methods can affect the reliability and comparability of the results.
 ## Conclusion
+The main objective of this project was to investigate whether the properties of Milky Way globular clusters could help distinguish between In-situ formation vs accreted formation. The core three properties that were investigated were age, metallicity and galactocentric distance. For the age-metallicity analysis for vandenBerg and Krause21 data sets they both showed relatively strong negative correlation and moderately negative correlation indicating older globular clusters generally tend to have lower metallicities. This aligns with theoretical predictions that clusters that formed later could have more chemically enriched gas (higher metallicity). The distance-metallicity analysis for the Harris and vandenBerg datasets both showed weak and moderate negative correlations indicating a general tendency for clusters farther from the Galactic centre to have lower metallicites. This provides useful context but is not solidifying evidence for a clusters formation. The two accretion candidates Palomar 12 and Terzan 7 that were identified as outliers in the computational analysis for the Age-Metallicity relation have also been publicly researched and considered as accretion candidates from the Sagittarius dwarf galaxy. This reveals that examining age and metallicity can help highlight interesting clusters for further investigation. Overall the objective to distinguish In-situ vs accreted clusters and identify accreted clusters was not necessarily achieved however interesting clusters were identified as candidates.
+
 ## References
 
 Dinescu, D. I., et al. (2000). The Absolute Proper Motion of Palomar 12: A Case for Tidal Capture from the Sagittarius Dwarf Spheroidal Galaxy. The Astronomical Journal. https://arxiv.org/abs/astro-ph/0006314
